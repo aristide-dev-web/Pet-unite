@@ -4,6 +4,7 @@
 .kotlin/
 .cxx/
 build/
+web/
 *.jks
 *.keystore
 *.hprof

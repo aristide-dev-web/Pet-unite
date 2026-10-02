@@ -2,8 +2,6 @@
 
 **Pet Unite** è una piattaforma rivoluzionaria nata per trasformare radicalmente il modo in cui proteggiamo e ci prendiamo cura dei nostri animali. Sviluppata interamente da me come **sviluppatore solista in soli 3-4 mesi**, l'app rappresenta il culmine di un percorso di apprendimento intenso, dove ho affrontato e risolto "problemi invisibili" partendo da zero, creando un'architettura **cross-platform (Flutter & Dart)** d'eccellenza, ottimizzata perfettamente per iOS e Android.
 
-> ⚠️ **Showcase Repository**: Il codice sorgente è privato per la protezione della proprietà intellettuale. Questa documentazione illustra in dettaglio la visione, la tecnologia e l'innovazione dietro il progetto.
-
 ---
 
 ## 🚀 La Visione: Sicurezza Passiva & Futuro Digitale
@@ -17,6 +15,91 @@ L'obiettivo di Pet Unite è superare i limiti dei sistemi di ritrovamento attual
 * **Geolocalizzazione & Mappe Native**: L'app non utilizza API a pagamento di terze parti, ma si integra direttamente con i **Maps nativi dei telefoni (Apple e Google)**. Questo garantisce performance massime e **zero costi di licenza**.
 * **Messaggistica Real-time**: Una chat proprietaria avanzata e funzionante anche ad app chiusa, fondamentale per gestire le emergenze e i ritrovamenti istantanei.
 * **AI Integrata**: Un'intelligenza artificiale dedicata che assiste l'utente nella gestione quotidiana del pet e arricchisce l'esperienza d'uso.
+
+---
+
+## 💻 Architettura & Snippet di Codice (Flutter & Dart)
+
+Ecco una selezione dell'architettura e del codice sorgente di Pet Unite:
+
+### 🔔 1. Gesture Notifiche in Background ("App-Killed" Handler)
+```dart
+// Handler Top-Level eseguito dal VM Entry-Point anche ad applicazione chiusa/killata
+@pragma('vm:entry-point')
+Future<void> firebaseMessagingBackgroundHandler(RemoteMessage message) async {
+  await Firebase.initializeApp();
+
+  final localNotif = FlutterLocalNotificationsPlugin();
+  const androidInit = AndroidInitializationSettings('@mipmap/ic_launcher');
+  const iosInit = DarwinInitializationSettings();
+  
+  await localNotif.initialize(
+    InitializationSettings(android: androidInit, iOS: iosInit)
+  );
+
+  final data = message.data;
+  final String title = data['title'] ?? message.notification?.title ?? 'PetUnite';
+  final String body = data['text'] ?? message.notification?.body ?? 'Nuova attività';
+  
+  // Canale dinamico per Petsitting vs Smarrimenti/Notifiche Generali
+  final bool isPetsitting = data['category'] == 'petsitting';
+
+  final androidDetails = AndroidNotificationDetails(
+    isPetsitting ? 'petsitting_channel' : 'high_importance_channel',
+    isPetsitting ? 'Notifiche Petsitting' : 'Notifiche Importanti',
+    importance: Importance.max,
+    priority: Priority.high,
+    color: isPetsitting ? const Color(0xFF00AAA0) : const Color(0xFF6366F1),
+  );
+
+  await localNotif.show(
+    message.hashCode,
+    title,
+    body,
+    NotificationDetails(android: androidDetails),
+    payload: jsonEncode(data),
+  );
+}
+```
+
+### 🐶 2. Modulo Pet-Sitting & Stripe Integration
+```dart
+// Controller di gestione prenotazione Pet-Sitter con Stripe Payment Sheet
+class PetSittingBookingController {
+  final FirebaseFirestore _db = FirebaseFirestore.instance;
+
+  Future<bool> processBookingPayment({
+    required String bookingId,
+    required String sitterId,
+    required double amount,
+  }) async {
+    try {
+      // Inizializza la sessione Stripe Payment Sheet in modo sicuro
+      await Stripe.instance.initPaymentSheet(
+        paymentSheetParameters: SetupPaymentSheetParameters(
+          paymentIntentClientSecret: 'YOUR_STRIPE_CLIENT_SECRET',
+          merchantDisplayName: 'PetUnite Services',
+          style: ThemeMode.dark,
+        ),
+      );
+
+      // Presenta la schermata di pagamento nativa
+      await Stripe.instance.presentPaymentSheet();
+
+      // Aggiorna lo stato della prenotazione su Firestore
+      await _db.collection('bookings').doc(bookingId).update({
+        'status': 'confirmed',
+        'paidAt': FieldValue.serverTimestamp(),
+      });
+
+      return true;
+    } catch (e) {
+      debugPrint('Errore durante il pagamento: $e');
+      return false;
+    }
+  }
+}
+```
 
 ---
 

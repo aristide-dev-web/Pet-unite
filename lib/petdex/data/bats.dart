@@ -1,0 +1,68 @@
+import 'package:petping/petdex/pet_card_model.dart';
+
+final List<PetCardModel> batCards = [
+  PetCardModel(
+    id: 20001,
+    name: "Pipistrello della Frutta",
+    species: "Pipistrello",
+    rarity: PetRarity.epic,
+    description: "Grande pipistrello tropicale che si nutre di nettare e frutta, essenziale per l'ecosistema.",
+    habitat: "Foreste tropicali e grotte",
+  ),
+  PetCardModel(
+    id: 20002,
+    name: "Pipistrello Vampiro",
+    species: "Pipistrello",
+    rarity: PetRarity.mythic,
+    description: "Famoso per nutrirsi di sangue, possiede sensori di calore per individuare le prede.",
+    habitat: "America centrale e del Sud",
+  ),
+  PetCardModel(
+    id: 20003,
+    name: "Pipistrello Orecchiuto",
+    species: "Pipistrello",
+    rarity: PetRarity.rare,
+    description: "Dotato di orecchie enormi per captare il minimo ronzio di un insetto.",
+    habitat: "Boschi e vecchi edifici",
+  ),
+  PetCardModel(
+    id: 20004,
+    name: "Volpe Volante della Malesia",
+    species: "Pipistrello",
+    rarity: PetRarity.legendary,
+    description: "Uno dei pipistrelli più grandi al mondo, con un'apertura alare fino a 1.5 metri.",
+    habitat: "Sud-est asiatico",
+  ),
+  PetCardModel(
+    id: 20005,
+    name: "Pipistrello Bianco dell'Honduras",
+    species: "Pipistrello",
+    rarity: PetRarity.mythic,
+    description: "Piccoli pipistrelli bianchi che costruiscono 'tende' usando foglie di heliconia.",
+    habitat: "Foreste pluviali dell'America centrale",
+  ),
+  PetCardModel(
+    id: 20006,
+    name: "Nottola Comune",
+    species: "Pipistrello",
+    rarity: PetRarity.uncommon,
+    description: "Uno dei pipistrelli europei più grandi, vola alto sopra le foreste cacciando insetti.",
+    habitat: "Cavità degli alberi",
+  ),
+  PetCardModel(
+    id: 20007,
+    name: "Pipistrello Muso di Porco",
+    species: "Pipistrello",
+    rarity: PetRarity.mythic,
+    description: "Il mammifero più piccolo al mondo per dimensioni, pesa appena 2 grammi.",
+    habitat: "Grotte calcaree in Thailandia e Myanmar",
+  ),
+  PetCardModel(
+    id: 20008,
+    name: "Pipistrello Pescatore",
+    species: "Pipistrello",
+    rarity: PetRarity.epic,
+    description: "Usa l'ecolocalizzazione per individuare piccoli pesci sulla superficie dell'acqua.",
+    habitat: "Vicinanza di fiumi e laghi in America Latina",
+  ),
+];

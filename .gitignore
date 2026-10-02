@@ -1,0 +1,11 @@
+.dart_tool/
+.idea/
+.gradle/
+.kotlin/
+.cxx/
+build/
+*.jks
+*.keystore
+*.hprof
+*.env
+local.properties

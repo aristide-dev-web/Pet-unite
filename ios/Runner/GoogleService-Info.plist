@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>569543725876-glep995v3imj9qgofbq8r43lque875ct.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.569543725876-glep995v3imj9qgofbq8r43lque875ct</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>569543725876-ksltvet8k7rdhfmrcld7cvupu9thg12n.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCpF6naxCoe6UhSdUfukRRYqCReSm7826s</string>
+	<key>GCM_SENDER_ID</key>
+	<string>569543725876</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.petping.app</string>
+	<key>PROJECT_ID</key>
+	<string>petping-39e1a</string>
+	<key>STORAGE_BUCKET</key>
+	<string>petping-39e1a.firebasestorage.app</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:569543725876:ios:e2df5dc8b93da0c18acb61</string>
+</dict>
+</plist>

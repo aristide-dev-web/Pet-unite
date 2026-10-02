@@ -1,0 +1,38 @@
+{
+  "project_info": {
+    "project_number": "569543725876",
+    "project_id": "petping-39e1a",
+    "storage_bucket": "petping-39e1a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:569543725876:android:a60a24ca2b2773818acb61",
+        "android_client_info": {
+          "package_name": "com.petping.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "569543725876-hn5dc7vbs026en8010ej94b8mocksukt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.petping.app",
+            "certificate_hash": "7a6d367b5f7fde4fd7012b2f21a0417e73d44d3a"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "YOUR_SECURE_FIREBASE_API_KEY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

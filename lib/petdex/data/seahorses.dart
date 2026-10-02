@@ -1,0 +1,68 @@
+import 'package:petping/petdex/pet_card_model.dart';
+
+final List<PetCardModel> seahorseCards = [
+  PetCardModel(
+    id: 19001,
+    name: "Cavalluccio Marino Comune",
+    species: "Cavalluccio",
+    rarity: PetRarity.rare,
+    description: "Noto per la coda prensile e perché è il maschio a portare avanti la gravidanza.",
+    habitat: "Praterie di posidonia e barriere coralline",
+  ),
+  PetCardModel(
+    id: 19002,
+    name: "Drago Marino Fogliaceo",
+    species: "Cavalluccio",
+    rarity: PetRarity.mythic,
+    description: "Maestro del mimetismo, le sue appendici sembrano foglie di alghe che fluttuano.",
+    habitat: "Acque temperate dell'Australia meridionale",
+  ),
+  PetCardModel(
+    id: 19003,
+    name: "Cavalluccio Pigmeo",
+    species: "Cavalluccio",
+    rarity: PetRarity.epic,
+    description: "Uno dei più piccoli al mondo, vive perfettamente mimetizzato tra i coralli gorgonie.",
+    habitat: "Coralli profondi del Pacifico",
+  ),
+  PetCardModel(
+    id: 19004,
+    name: "Cavalluccio Marino Panciuto",
+    species: "Cavalluccio",
+    rarity: PetRarity.uncommon,
+    description: "Uno dei cavallucci più grandi, riconoscibile per la pancia prominente.",
+    habitat: "Porti, estuari e scogliere australiane",
+  ),
+  PetCardModel(
+    id: 19005,
+    name: "Drago Marino Comune (Erbaceo)",
+    species: "Cavalluccio",
+    rarity: PetRarity.epic,
+    description: "Simile al fogliaceo ma con appendici meno ramificate, dai colori brillanti.",
+    habitat: "Scogliere rocciose e letti di alghe",
+  ),
+  PetCardModel(
+    id: 19006,
+    name: "Cavalluccio Marino del Mediterraneo",
+    species: "Cavalluccio",
+    rarity: PetRarity.rare,
+    description: "Piccolo e delicato, vive tra le alghe del nostro mare.",
+    habitat: "Mar Mediterraneo",
+  ),
+  PetCardModel(
+    id: 19007,
+    name: "Pesce Ago Spettrale",
+    species: "Cavalluccio",
+    rarity: PetRarity.mythic,
+    description: "Estremamente raro e sottile, vive tra i coralli a frusta e i gigli di mare.",
+    habitat: "Barriere coralline tropicali profonde",
+  ),
+  PetCardModel(
+    id: 19008,
+    name: "Pesce Trombetta",
+    species: "Cavalluccio",
+    rarity: PetRarity.uncommon,
+    description: "Parente dei cavallucci, dal corpo lunghissimo e bocca a tubo.",
+    habitat: "Barriere coralline",
+  ),
+];

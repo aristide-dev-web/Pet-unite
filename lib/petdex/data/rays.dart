@@ -1,0 +1,60 @@
+import 'package:petping/petdex/pet_card_model.dart';
+
+final List<PetCardModel> rayCards = [
+  PetCardModel(
+    id: 18001,
+    name: "Manta Gigante",
+    species: "Razza",
+    rarity: PetRarity.legendary,
+    description: "La più grande delle razze, plana maestosamente negli oceani nutrendosi di plancton.",
+    habitat: "Oceani aperti e barriere coralline",
+  ),
+  PetCardModel(
+    id: 18002,
+    name: "Trigone a Macchie Blu",
+    species: "Razza",
+    rarity: PetRarity.rare,
+    description: "Piccola razza dai colori vivaci, dotata di un pericoloso aculeo velenoso sulla coda.",
+    habitat: "Fondali sabbiosi tropicali",
+  ),
+  PetCardModel(
+    id: 18003,
+    name: "Razza Chiodata",
+    species: "Razza",
+    rarity: PetRarity.uncommon,
+    description: "Caratterizzata da protuberanze ossee sulla pelle, comune nel Mediterraneo.",
+    habitat: "Fondali sabbiosi e fangosi",
+  ),
+  PetCardModel(
+    id: 18004,
+    name: "Pesce Sega Comune",
+    species: "Razza",
+    rarity: PetRarity.mythic,
+    description: "Riconoscibile per il lungo rostro seghettato, è una specie gravemente minacciata.",
+    habitat: "Estuari e acque costiere tropicali",
+  ),
+  PetCardModel(
+    id: 18005,
+    name: "Torpedine Ocellata",
+    species: "Razza",
+    rarity: PetRarity.epic,
+    description: "Razza elettrica capace di generare forti scariche per stordire le prede.",
+    habitat: "Fondali sabbiosi costieri",
+  ),
+  PetCardModel(
+    id: 18006,
+    name: "Aquila di Mare",
+    species: "Razza",
+    rarity: PetRarity.rare,
+    description: "Nuota agitando le pinne pettorali come fossero ali, simile a un uccello subacqueo.",
+    habitat: "Oceano aperto e lagune",
+  ),
+  PetCardModel(
+    id: 18007,
+    name: "Manta Mobula",
+    species: "Razza",
+    rarity: PetRarity.epic,
+    description: "Famosa per i suoi incredibili salti fuori dall'acqua in grandi gruppi.",
+    habitat: "Mari caldi e temperati",
+  ),
+];

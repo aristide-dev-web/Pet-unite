@@ -1,0 +1,96 @@
+name: petping
+description: "A new Flutter project."
+publish_to: 'none'
+version: 1.0.2+4
+
+environment:
+  sdk: ^3.10.7
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Core - Versioni allineate per evitare conflitti
+  firebase_core: ^4.6.0
+  firebase_auth: ^6.1.4
+  firebase_storage: ^13.0.6
+  cloud_firestore: ^6.1.2
+  firebase_messaging: ^16.1.1
+  google_sign_in: ^6.2.2
+  sign_in_with_apple: ^6.1.3
+
+  # AI & OCR - Aggiornato alla v2.2.0 per compatibilità Firebase Core 4.x
+  firebase_vertexai: ^2.2.0
+  google_mlkit_text_recognition: ^0.11.0
+
+  # Notifiche e localizzazione
+  flutter_local_notifications: ^20.1.0
+  flutter_timezone: ^5.0.1
+  timezone: ^0.10.0
+  easy_localization: ^3.0.3
+
+  # Pagamenti
+  flutter_stripe: ^10.1.1
+
+  # UI e funzionalità
+  table_calendar: ^3.0.9
+  uuid: ^4.3.3
+  image_picker: ^1.0.7
+  image: ^4.2.0
+  qr_flutter: ^4.1.0
+  http: ^1.6.0
+  xml: ^6.3.0
+  url_launcher: ^6.2.5
+  html_unescape: ^2.0.0
+  intl: ^0.20.2
+  shared_preferences: ^2.2.2
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  path_provider: ^2.1.1
+  file_picker: ^10.3.10
+  permission_handler: ^12.0.1
+  share_handler: ^0.0.20
+  share_plus: ^10.1.0
+  receive_sharing_intent: ^1.4.5
+  device_info_plus: ^10.0.0
+  app_links: ^6.3.2
+  gal: ^2.1.1
+
+  # Mappe e geolocalizzazione
+  geolocator: ^14.0.2
+  geocoding: ^4.0.0
+  latlong2: ^0.9.0
+  flutter_map: ^8.2.2
+  google_maps_flutter: ^2.5.0
+  flutter_google_places_hoc081098: ^2.0.0
+
+  cupertino_icons: ^1.0.8
+  cloud_functions: ^6.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  hive_generator: ^2.0.1
+  build_runner: ^2.4.6
+  flutter_launcher_icons: ^0.13.1
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/sfondi/logo.jpeg"
+  adaptive_icon_background: "#FFFFFF"
+  adaptive_icon_foreground: "assets/sfondi/logo.jpeg"
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/langs/
+    - assets/langs/it/
+    - assets/langs/en/
+    - assets/langs/es/
+    - assets/langs/fr/
+    - assets/langs/de/
+    - assets/sfondi/
+    - assets/petcard/
+    - assets/images/
